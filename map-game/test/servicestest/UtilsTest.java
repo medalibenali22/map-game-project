@@ -1,11 +1,11 @@
-package servicesTest;
+package servicestest;
 
 import java.io.IOException;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import services.Utils;
+import util.Utils;
 
 public class UtilsTest {
 

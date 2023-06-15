@@ -1,8 +1,8 @@
-package jeuCarte;
+package jeucarte;
 
 import java.io.IOException;
 
-import services.Utils;
+import util.Utils;
 
 public class Application {
 	
