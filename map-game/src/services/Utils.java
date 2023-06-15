@@ -9,6 +9,7 @@ public class Utils {
 	private static final char SPACE = ' ';
 	
 	public static char[][] loadMap(String filePath) throws IOException {
+		try {
         BufferedReader reader = new BufferedReader(new FileReader(filePath));
         String line;
         StringBuilder sb = new StringBuilder();
@@ -31,9 +32,15 @@ public class Utils {
         }
 
         return map;
+        }
+		catch(IOException e){
+			e.printStackTrace();
+			return null;
+		}
     }
 
     public static String[] loadMovement(String filePath) throws IOException {
+    	try {
         BufferedReader reader = new BufferedReader(new FileReader(filePath));
         String[] movement = new String[2];
 
@@ -43,6 +50,11 @@ public class Utils {
         reader.close();
 
         return movement;
+    	}
+		catch(IOException e){
+			e.printStackTrace();
+			return null;
+		}
     }
 
     public static int[] parseCoordinates(String coordinates) {
